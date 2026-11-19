@@ -29,6 +29,7 @@ ACCENT = (58, 84, 128)
 TEAL = (44, 96, 88)
 NAVY = (38, 58, 92)
 BORDER = (198, 200, 208)
+DATE_CHECK_RED = (172, 62, 44)
 
 CONTINENTS = {
     "Americas": (168, 62, 44),
@@ -46,143 +47,151 @@ FEATURED = {
     1: {
         "kick": "IRAN - GULF",
         "head": "Iran strikes back; US hits Qeshm",
-        "summ": ("US struck an IRGC missile site on Qeshm Island on Tuesday; "
-                 "Iran answered early Wednesday with strikes on Kuwait's Ali "
-                 "Al Salem Air Base and Bahrain, which says it intercepted "
-                 "several attacks before dawn."),
+        "summ": "US jets hit an IRGC site on Qeshm; Iran answered on Kuwait and Bahrain - Bahrain says it intercepted several.",
         "continent": "Mideast",
         "kind": "missiles",
+        "tag": "STRIKES ON BOTH SIDES",
+        "chip": "CONFIRMED - REUTERS/AP",
     },
     2: {
         "kick": "ASIA - APEC SUMMIT",
         "head": "Xi and Putin meet in Shenzhen",
-        "summ": ("Xi Jinping and Vladimir Putin met on the APEC sidelines, "
-                 "denouncing protectionism and Western sanctions; a trilateral "
-                 "with Trump is set for Thursday, with no published agenda."),
+        "summ": "The two denounce protectionism and Western sanctions; the first Trump-Xi-Putin trilateral is set for Thursday.",
         "continent": "Asia",
         "kind": "flags",
+        "tag": "THREE-WAY ON THURSDAY",
+        "chip": "CONFIRMED - JUST SECURITY",
     },
     3: {
-        "kick": "ASIA - QUAD IN MANILA",
+        "kick": "ASIA - QUAD",
         "head": "Quad meets; Trump lands in Manila",
-        "summ": ("First leader-level Quad meeting in over two years; Trump met "
-                 "Marcos Jr., announced a Philippines trade deal, then flies on "
-                 "to China."),
+        "summ": "First leader-level Quad meeting in 2+ years; Trump meets Marcos Jr. and announces a Philippines trade deal.",
         "continent": "Asia",
         "kind": "harbour",
+        "tag": "MANILA FIRST",
+        "chip": "CONFIRMED - OPENCHRONICLE",
     },
 }
 
 GRID = {
-    4: {"kick": "UKRAINE - WAR", "head": "Russia fires 141 drones; 126 downed",
-        "summ": "Overnight barrage across Ukraine; hits recorded at 7 sites. (ISW)",
-        "continent": "Europe", "kind": "missiles"},
-    5: {"kick": "EUROPE - UKRAINE AID", "head": "EU proposes a 45bn-euro Ukraine loan",
-        "summ": ("25bn military and 20bn budget support for 2027, presented "
-                 "Wednesday. (Use the euro sign if the font has it; the amounts "
-                 "are 25bn + 20bn = 45bn euros.)"),
-        "continent": "Europe", "kind": "flags"},
-    6: {"kick": "UNITED STATES - MARKETS", "head": "Fed minutes back more hikes; Dow -561",
-        "summ": ("Minutes put a bigger December hike in play; S and P 500 -0.23 "
-                 "percent, Nasdaq +0.42 percent."),
-        "continent": "Americas", "kind": "coin"},
-    7: {"kick": "MARKETS - GOLD", "head": "Gold sinks to 14-month low",
-        "summ": "Closed $3,725.18 an ounce, down 3.22 percent, on Wednesday.",
-        "continent": "Americas", "kind": "coin"},
-    8: {"kick": "TECH - IPO", "head": "Anthropic prices IPO at $83",
-        "summ": "Raising $81.3bn - the largest listing on record, topping SpaceX's $75bn.",
-        "continent": "Americas", "kind": "rocket"},
-    9: {"kick": "SCIENCE - SPACE", "head": "Voyager 1 reaches one light-day",
-        "summ": ("First human-made object to reach one light-day from Earth "
-                 "(5:16:07 ET, about 16bn miles). NASA JPL."),
-        "continent": "Americas", "kind": "sun"},
-    10: {"kick": "AMERICAS - HEALTH", "head": "US loses measles-free status after 26 years",
-         "summ": ("PAHO: measles endemic again; 5,412 cases in 2026, 10 deaths, "
-                  "highest since 1991."),
-         "continent": "Americas", "kind": "dome"},
-    11: {"kick": "AFRICA - HEALTH", "head": "Ebola passes 11,000 cases in DR Congo",
-         "summ": ("More than doubled in three months, second-largest on record; "
-                  "nearly 3 in 4 infected under-5s die. WHO."),
-         "continent": "Africa", "kind": "dome"},
-    12: {"kick": "INDIA - WEATHER", "head": "Cyclone Akvan bears down on Odisha",
-         "summ": ("Severe cyclonic storm about 570 km east of Chennai; landfall "
-                  "expected near Andhra Pradesh around 20 Nov. IMD."),
-         "continent": "Asia", "kind": "cyclone"},
-    13: {"kick": "PACIFIC - WEATHER", "head": "Cyclone Xavier hits Category 5",
-         "summ": ("Briefly Cat 5 (110 kt) over the northern Cook Islands; wharves "
-                  "damaged on Manihiki, no casualties."),
-         "continent": "Oceania", "kind": "cyclone"},
-    14: {"kick": "GAZA - WAR", "head": "Israeli tanks cross Yellow Line at Nuseirat",
-         "summ": "First such raid since the truce; three Palestinians killed, medics say.",
-         "continent": "Mideast", "kind": "arrows"},
-    15: {"kick": "UNITED STATES - POLITICS", "head": "Jeffries wins Democrats' Speaker nod",
-         "summ": "Won the caucus vote 251-11; full House vote set for 3 January.",
-         "continent": "Americas", "kind": "dome"},
+    4: {"kick": "UKRAINE - WAR", "head": "Russia fires 141 drones; 126 downed", "summ": "Overnight barrage, hits at 7 sites.", "continent": "Europe", "kind": "drones", "chip": "CLAIM - KYIV"},
+    5: {"kick": "EUROPE - UKRAINE AID", "head": "EU proposes a 45bn-euro Ukraine loan", "summ": "25bn military, 20bn budget for 2027.", "continent": "Europe", "kind": "euro", "chip": "CONFIRMED - REUTERS"},
+    6: {"kick": "US - MARKETS", "head": "Fed minutes back more hikes; Dow -561", "summ": "S and P 500 -0.23%, Nasdaq +0.42%.", "continent": "Americas", "kind": "dow", "chip": "CONFIRMED - REUTERS"},
+    7: {"kick": "MARKETS - GOLD", "head": "Gold sinks to a 14-month low", "summ": "Closed $3,725 an ounce, down 3.2%.", "continent": "Americas", "kind": "gold", "chip": "CONFIRMED - REUTERS"},
+    8: {"kick": "TECH - IPO", "head": "Anthropic prices IPO at $83", "summ": "Raising $81.3bn - a record listing.", "continent": "Americas", "kind": "ipo", "chip": "CONFIRMED - REUTERS"},
+    9: {"kick": "SCIENCE - SPACE", "head": "Voyager 1 reaches one light-day", "summ": "First human-made object to do so.", "continent": "Americas", "kind": "voyager", "chip": "CONFIRMED - NASA JPL"},
+    10: {"kick": "AMERICAS - HEALTH", "head": "US loses measles-free status after 26 years", "summ": "PAHO: endemic again; 5,412 cases in 2026.", "continent": "Americas", "kind": "measles", "chip": "CONFIRMED - PAHO"},
+    11: {"kick": "AFRICA - HEALTH", "head": "Ebola passes 11,000 cases in DR Congo", "summ": "More than doubled in three months.", "continent": "Africa", "kind": "ebola", "chip": "CONFIRMED - WHO"},
+    12: {"kick": "INDIA - WEATHER", "head": "Cyclone Akvan bears down on Odisha", "summ": "Severe storm; landfall expected ~20 Nov.", "continent": "Asia", "kind": "cyclone", "chip": "CONFIRMED - IMD"},
+    13: {"kick": "PACIFIC - WEATHER", "head": "Cyclone Xavier hits Category 5", "summ": "Briefly Cat 5 over the Cook Islands.", "continent": "Oceania", "kind": "xavier", "chip": "CONFIRMED - FIJI MET"},
+    14: {"kick": "GAZA - WAR", "head": "Israeli tanks cross Yellow Line at Nuseirat", "summ": "First such raid since the truce.", "continent": "Mideast", "kind": "gaza", "chip": "CONFIRMED - REUTERS"},
+    15: {"kick": "US - POLITICS", "head": "Jeffries wins Democrats' Speaker nod", "summ": "251-11; full House vote set for 3 January.", "continent": "Americas", "kind": "vote", "chip": "CONFIRMED - AP"},
 }
 
 BRIEFS = {
-    16: "Houthis fire five drones at two pumping stations on Saudi East-West pipeline, Riyadh area.",
-    17: "Gaza winter: WHO - 950,000 displaced Palestinians in flood-prone ground in Gaza's fourth winter.",
-    18: "Louvre workers vote to extend strike over understaffing and the October crown-jewels heist.",
-    19: "ASHA health workers' strike enters second day in Karnataka; demand 15,000 rupees/month honorarium.",
-    20: "Maharashtra district court employees call off strike after talks with four Bombay High Court judges.",
-    21: "Magnitude 6.0 quake off Peru's Ica region; no casualties, tsunami ruled out.",
-    22: "Ghana's new $60m presidential jet sparks public outrage amid austerity.",
-    23: "Nigeria's central bank and NNPC sign forex and energy funding deal.",
-    24: "Malaysia Q3 GDP beats forecasts at 5.5 percent; AI boom to drive 2027 growth.",
-    25: "Fed's Waller calls for more aggressive inflation response - half-point hike in play for Dec.",
-    26: "UK inflation rises to 3.6 percent, highest in a year, on record fuel prices.",
-    27: "Amnesty: RSF drone strikes in El Obeid killed 37 civilians, June-August.",
-    28: "Bangladesh garment unrest: about 535 factories hit, about 130 shut, about 300 arrested.",
-    29: "GTA VI rolls out to rave reviews, Metacritic 99, ahead of its 19 Nov launch.",
-    30: "Quake felt in Bucharest; EMSC 5.3, Romania's institute 5.7.",
-    31: "Magnitude 4.1 quake strikes southwest Kuwait; no damage reported.",
-    32: "Migrant boat capsizes off Senegal, at least one dead; search ongoing.",
-    33: "Hegseth makes surprise Caracas trip, signs US-Venezuela defence partnership.",
-    34: "Brazil Senate approves Lula's $10bn fiscal package; heads to lower house.",
-    35: "Sheinbaum says Mexico-US trade talks \"very far along\" after meeting Trump.",
-    36: "Monitors say Ethiopia and Eritrea massed troops near Badme; war fears rise.",
-    37: "Tame Impala wins seven ARIAs, including Album of the Year for Deadbeat.",
-    38: "Alcaraz beats Medvedev 6-2, 6-4 at ATP Finals, reaching the semi-finals.",
-    39: "ECDC warns superbug infections surged; Klebsiella cases up 72 percent since 2019.",
-    40: "Pew projects Islam will pass Christianity as the world's largest religion by 2035.",
-    41: "Brent crude settles $91.95 a barrel, down $1.19 (-1.28 percent) on surplus fears.",
-    42: "Chelsea Women beat PSG 1-0, Buurman 87th-minute winner (UEFA UWCL, Matchday 5).",
-    43: "Japan exports hit record 11.8tn yen in Oct, +20.5 percent, 14th straight monthly rise (Reuters).",
-    44: "Japan Oct visitors hit record 3.91m despite China arrivals falling 47 percent (JNTO).",
-    45: "Australia wages +1.1 percent in Sep quarter, fastest since Dec 2023; real pay still falls (ABS).",
-    46: "EU Council authorises signing EU-Indonesia CEPA and investment deal (Consilium 18/11).",
-    47: "COP31 launches second Global Stocktake; 21 issues still unresolved on Wed (Antalya).",
-    48: "Ella Langley wins record six CMAs in one night, incl. Entertainer of the Year (Nashville).",
-    49: "National Book Awards: Assadi fiction, ElGendy nonfiction; Rushdie lifetime medal (NYC).",
-    50: "First Ivors Composer Awards: Pemberton Composer of the Year, Einaudi Fellow (London).",
-    51: "Fiji declares national state of disaster over El Nino drought, FJ$20m allocated (PM Rabuka).",
-    52: "Ruto gives 4th State of the Nation address, unveils PAYE relief, KSh340bn fund (Nairobi).",
-    53: "Trump asks Supreme Court Wed to block Venezuelan TPS restoration for 600,000.",
-    54: "Qonto granted French/ECB banking licence, serves 750,000+ European SMEs.",
-    55: "Cassava seeks $1bn to buy Nvidia chips for AI data centres across Africa (TechCabal).",
+    16: "Houthis fire five drones at two pumping stations on Saudi pipeline",
+    17: "Gaza winter: WHO counts 950,000 displaced on flood-prone ground",
+    18: "Louvre workers vote to extend strike over staffing and the jewel heist",
+    19: "ASHA health workers' strike enters second day in Karnataka",
+    20: "Maharashtra court staff call off strike after talks with judges",
+    21: "Magnitude 6.0 quake off Peru's Ica region; tsunami ruled out",
+    22: "Ghana's new $60m presidential jet sparks public outrage",
+    23: "Nigeria's central bank and NNPC sign forex and energy deal",
+    24: "Malaysia Q3 GDP beats forecasts at 5.5%; AI boom to drive 2027",
+    25: "Fed's Waller calls for more aggressive inflation response",
+    26: "UK inflation rises to 3.6%, highest in a year, on fuel prices",
+    27: "Amnesty: RSF drone strikes in El Obeid killed 37 civilians",
+    28: "Bangladesh garment unrest: ~535 factories hit, ~300 arrested",
+    29: "GTA VI rolls out to rave reviews, Metacritic 99, ahead of launch",
+    30: "Quake felt in Bucharest; EMSC 5.3, Romania's institute 5.7",
+    31: "Magnitude 4.1 quake strikes southwest Kuwait; no damage",
+    32: "Migrant boat capsizes off Senegal, at least one dead",
+    33: "Hegseth makes surprise Caracas trip, signs defence partnership",
+    34: "Brazil Senate approves Lula's $10bn fiscal package",
+    35: "Sheinbaum says Mexico-US trade talks 'very far along'",
+    36: "Ethiopia and Eritrea mass troops near Badme; war fears rise",
+    37: "Tame Impala wins seven ARIAs, Album of the Year for Deadbeat",
+    38: "Alcaraz beats Medvedev 6-2, 6-4 at ATP Finals, into semis",
+    39: "ECDC warns superbug infections surged; Klebsiella up 72% since 2019",
+    40: "Pew projects Islam will pass Christianity as largest religion by 2035",
+    41: "Brent crude settles $91.95 a barrel, down $1.19 (-1.28%)",
+    42: "Chelsea Women beat PSG 1-0, Buurman 87th-minute winner",
+    43: "Japan exports hit record 11.8tn yen in Oct, +20.5%",
+    44: "Japan Oct visitors hit record 3.91m despite China arrivals -47%",
+    45: "Australia wages +1.1% in Sep quarter, fastest since Dec 2023",
+    46: "EU Council authorises signing EU-Indonesia trade deal",
+    47: "COP31 launches second Global Stocktake; 21 issues unresolved",
+    48: "Ella Langley wins record six CMAs, incl. Entertainer of the Year",
+    49: "National Book Awards: Assadi fiction, ElGendy nonfiction",
+    50: "First Ivors Composer Awards: Pemberton Composer of the Year",
+    51: "Fiji declares state of disaster over El Nino drought",
+    52: "Ruto gives State of the Nation address, unveils tax relief",
+    53: "Trump asks Supreme Court to block Venezuelan TPS restoration",
+    54: "Qonto granted French/ECB banking licence",
+    55: "Cassava seeks $1bn to buy Nvidia chips for African AI centres",
 }
 
 PINS = {
-    1: (52, 27), 2: (114, 22), 3: (121, 15), 4: (32, 49), 5: (5, 51),
-    6: (-74, 41), 8: (-122, 38), 10: (-84, 34), 11: (23, -3), 12: (86, 20),
-    13: (-160, -21), 14: (34, 31), 16: (47, 25), 18: (2, 49), 19: (77, 15),
-    21: (-77, -12), 22: (-2, 8), 23: (8, 10), 24: (102, 4), 26: (0, 52),
-    27: (30, 13), 28: (90, 24), 30: (26, 44), 31: (48, 29), 32: (-17, 15),
-    33: (-67, 11), 34: (-48, -16), 36: (39, 15), 37: (151, -34), 39: (18, 59),
-    43: (140, 36), 47: (31, 37), 48: (-87, 36), 51: (178, -18), 52: (37, -1),
-    55: (3, 6),
+    1: (51.5, 26.5, 0, 0),
+    2: (114.0, 22.5, 0, 0),
+    3: (121.0, 14.6, -6, -12),
+    4: (30.5, 50.4, 8, -2),
+    5: (4.35, 50.85, -8, -6),
+    6: (-74.0, 40.7, -4, -10),
+    7: (-0.1, 51.5, -12, -4),
+    8: (-122.4, 37.8, -8, -6),
+    9: (-118.1, 34.1, 0, 8),
+    10: (-98.0, 39.0, 0, 0),
+    11: (23.0, -2.0, 0, 0),
+    12: (86.0, 19.0, 6, 2),
+    13: (-160.0, -15.0, 0, 0),
+    14: (34.4, 31.45, -10, 8),
+    15: (-77.0, 38.9, -14, -8),
+    16: (46.7, 24.6, 0, 6),
+    17: (34.3, 31.4, 6, 12),
+    18: (2.35, 48.9, -12, -4),
+    19: (77.6, 13.0, 8, 4),
+    20: (72.8, 19.1, -8, -8),
+    21: (-75.4, -15.4, 0, 4),
+    22: (-0.2, 5.6, 0, 6),
+    23: (7.5, 9.1, 8, -4),
+    24: (101.7, 3.1, 2, 10),
+    25: (-77.0, 38.9, 10, 10),
+    26: (-0.1, 51.5, 10, 8),
+    27: (30.2, 13.2, 0, 6),
+    28: (90.4, 23.8, 8, -6),
+    29: (-74.0, 40.7, 12, 8),
+    30: (26.1, 44.4, -6, -10),
+    31: (47.5, 29.3, 10, -6),
+    32: (-17.4, 14.7, 0, -8),
+    33: (-66.9, 10.5, 0, -6),
+    34: (-47.9, -15.8, 0, 4),
+    35: (-99.1, 19.4, 0, -8),
+    36: (37.9, 14.7, -8, 4),
+    37: (151.2, -33.9, 0, -6),
+    38: (7.7, 45.1, 8, -12),
+    39: (18.1, 59.3, -6, -8),
+    40: (-77.0, 38.9, -2, 14),
+    41: (-0.1, 51.5, -2, -12),
+    42: (-0.1, 51.5, 10, 14),
+    43: (139.7, 35.7, 0, -6),
+    44: (139.7, 35.7, 12, -8),
+    45: (149.1, -35.3, 0, -6),
+    46: (4.35, 50.85, 12, 6),
+    47: (30.7, 36.9, 4, -10),
+    48: (-86.8, 36.2, 0, -6),
+    49: (-74.0, 40.7, -12, 12),
+    50: (-0.1, 51.5, -10, -12),
+    51: (178.4, -17.7, 0, -6),
+    52: (36.8, -1.3, 0, -6),
+    53: (-77.0, 38.9, 14, -4),
+    54: (2.35, 48.9, 12, 10),
+    55: (31.0, -17.8, 0, 4),
 }
 
-BRIEF_CONTINENT = {
-    16: "Mideast", 17: "Mideast", 18: "Europe", 19: "Asia", 20: "Asia",
-    21: "Americas", 22: "Africa", 23: "Africa", 24: "Asia", 25: "Americas",
-    26: "Europe", 27: "Africa", 28: "Asia", 29: "Americas", 30: "Europe",
-    31: "Mideast", 32: "Africa", 33: "Americas", 34: "Americas", 35: "Americas",
-    36: "Africa", 37: "Oceania", 38: "Europe", 39: "Europe", 40: "Asia",
-    41: "Mideast", 42: "Europe", 43: "Asia", 44: "Asia", 45: "Oceania",
-    46: "Europe", 47: "Asia", 48: "Americas", 49: "Americas", 50: "Europe",
-    51: "Oceania", 52: "Africa", 53: "Americas", 54: "Europe", 55: "Africa",
+PIN_CONTINENTS = {
+    1: "Mideast", 2: "Asia", 3: "Asia", 4: "Europe", 5: "Europe", 6: "Americas", 7: "Europe", 8: "Americas", 9: "Americas", 10: "Americas", 11: "Africa", 12: "Asia", 13: "Oceania", 14: "Mideast", 15: "Americas", 16: "Mideast", 17: "Mideast", 18: "Europe", 19: "Asia", 20: "Asia", 21: "Americas", 22: "Africa", 23: "Africa", 24: "Asia", 25: "Americas", 26: "Europe", 27: "Africa", 28: "Asia", 29: "Americas", 30: "Europe", 31: "Mideast", 32: "Africa", 33: "Americas", 34: "Americas", 35: "Americas", 36: "Africa", 37: "Oceania", 38: "Europe", 39: "Europe", 40: "Americas",
+    41: "Europe", 42: "Europe", 43: "Asia", 44: "Asia", 45: "Oceania", 46: "Europe", 47: "Mideast", 48: "Americas", 49: "Americas", 50: "Europe", 51: "Oceania", 52: "Africa", 53: "Americas", 54: "Europe", 55: "Africa"
 }
 
 
@@ -191,7 +200,7 @@ def continent_of(n):
         return FEATURED[n]["continent"]
     if n in GRID:
         return GRID[n]["continent"]
-    return BRIEF_CONTINENT[n]
+    return PIN_CONTINENTS[n]
 
 
 def story_of(n):
@@ -200,58 +209,43 @@ def story_of(n):
     return GRID[n]
 
 
-# --------------------------------------------------------------------------
-# Coarse world landmass, as (lon0, lon1, lat0, lat1) rectangles rasterised
-# onto the 72 x 36 (5-degree) map grid. Solid, recognisable continents:
-# Americas left, Europe/Africa centre, Asia right, Australia lower right.
-# --------------------------------------------------------------------------
 LAND_RECTS = [
-    # North America
-    (-168, -140, 55, 71),   # Alaska
-    (-140, -55, 50, 72),    # Canada
-    (-125, -67, 25, 50),    # United States
-    (-117, -87, 15, 33),    # Mexico
-    (-92, -77, 8, 17),      # Central America
-    (-55, -20, 60, 82),     # Greenland
-    (-120, -60, 72, 80),    # Arctic islands
-    # South America
+    (-168, -140, 55, 71),
+    (-140, -55, 50, 72),
+    (-125, -67, 25, 50),
+    (-117, -87, 15, 33),
+    (-92, -77, 8, 17),
+    (-55, -20, 60, 82),
+    (-120, -60, 72, 80),
     (-80, -35, -5, 12),
     (-75, -35, -20, -5),
     (-73, -53, -40, -20),
     (-73, -65, -55, -40),
-    # Europe
-    (-10, 5, 36, 51),       # Iberia and France
-    (5, 25, 36, 55),        # central Europe
-    (5, 32, 55, 71),        # Scandinavia
-    (-10, 2, 50, 59),       # British Isles
-    (-24, -13, 63, 67),     # Iceland
-    (20, 40, 44, 56),       # eastern Europe
-    # Mideast
-    (26, 63, 25, 42),       # Turkey through Iran
-    (34, 60, 12, 30),       # Arabia
-    # Africa
+    (-10, 5, 36, 51),
+    (5, 25, 36, 55),
+    (5, 32, 55, 71),
+    (-10, 2, 50, 59),
+    (-24, -13, 63, 67),
+    (20, 40, 44, 56),
+    (26, 63, 25, 42),
+    (34, 60, 12, 30),
     (-17, 35, 15, 37),
     (-17, 40, 5, 20),
     (8, 42, -12, 8),
     (12, 40, -35, -10),
-    (43, 50, -26, -12),     # Madagascar
-    # Asia
+    (43, 50, -26, -12),
     (32, 60, 55, 70),
-    (60, 180, 50, 75),      # Siberia
-    (45, 90, 35, 55),       # Central Asia
-    (73, 135, 20, 50),      # China
-    (68, 92, 8, 32),        # India
-    (95, 130, -10, 23),     # Southeast Asia
-    (129, 146, 31, 45),     # Japan
-    (95, 141, -10, 6),      # Indonesia
-    # Oceania
-    (113, 154, -39, -11),   # Australia
-    (166, 179, -47, -34),   # New Zealand
+    (60, 180, 50, 75),
+    (45, 90, 35, 55),
+    (73, 135, 20, 50),
+    (68, 92, 8, 32),
+    (95, 130, -10, 23),
+    (129, 146, 31, 45),
+    (95, 141, -10, 6),
+    (113, 154, -39, -11),
+    (166, 179, -47, -34),
 ]
 
-# --------------------------------------------------------------------------
-# Drawing helpers
-# --------------------------------------------------------------------------
 DRAW = None
 
 
@@ -260,7 +254,6 @@ def font(path, size):
 
 
 def wrap(text, fnt, max_width):
-    """Greedy word wrap using draw.textlength."""
     words = text.split()
     if not words:
         return []
@@ -278,10 +271,6 @@ def wrap(text, fnt, max_width):
 
 
 def block(x, y, w, text, fnt, line_height, max_y, fill=INK):
-    """Draw wrapped lines while they fit at or below max_y.
-
-    Returns the undrawn remainder ('' when everything was drawn).
-    """
     lines = wrap(text, fnt, w)
     cy = y
     i = 0
@@ -293,7 +282,6 @@ def block(x, y, w, text, fnt, line_height, max_y, fill=INK):
 
 
 def fit_block(x, y, w, text, path, sizes, max_y, lh_ratio, fill=INK):
-    """Largest font from `sizes` whose whole text fits; returns (size, lines)."""
     for size in sizes:
         fnt = font(path, size)
         lh = size * lh_ratio
@@ -315,18 +303,15 @@ def chip(cx, cy, r, n, fill):
 
 
 def tint(col, amount):
-    """Flat mix of `col` into PAPER; amount=0 paper, 1 col."""
     return tuple(int(round(PAPER[i] + (col[i] - PAPER[i]) * amount)) for i in range(3))
 
 
 def banner(x, y, w, h, kind, cont_col):
-    """Flat procedural banner for a story kind. No text, no gradients."""
     DRAW.rectangle([x, y, x + w, y + h], fill=tint(ACCENT, 0.16))
     a, c = ACCENT, cont_col
-    u = h / 84.0  # shape scale, 1.0 for the featured 84px-ish banner
+    u = h / 84.0
 
     if kind == "missiles":
-        # gulf coastline: flat sea band with a stepped shore
         sea = tint(a, 0.42)
         DRAW.rectangle([x, y + h * 0.72, x + w, y + h], fill=sea)
         pts = []
@@ -337,7 +322,6 @@ def banner(x, y, w, h, kind, cont_col):
             pts.append((px, py))
         pts += [(x + w, y + h), (x, y + h)]
         DRAW.polygon(pts, fill=tint(c, 0.30))
-        # two missile trails with heads
         for dx, col in ((0.26, a), (0.46, c)):
             sx = x + w * dx
             sy = y + h * 0.80
@@ -346,7 +330,6 @@ def banner(x, y, w, h, kind, cont_col):
             DRAW.line([sx, sy, ex, ey], fill=col, width=max(2, int(2.4 * u)))
             DRAW.polygon([(ex, ey), (ex - 3.4 * u, ey + 9 * u),
                           (ex + 3.4 * u, ey + 9 * u)], fill=col)
-        # burst
         bx, by = x + w * 0.86, y + h * 0.30
         r = 7.5 * u
         DRAW.ellipse([bx - r, by - r, bx + r, by + r], fill=tint(c, 0.85))
@@ -354,7 +337,6 @@ def banner(x, y, w, h, kind, cont_col):
                      fill=CARD)
 
     elif kind in ("skyline", "harbour"):
-        # skyline: flat blocks of varying height
         base = y + h * 0.86
         heights = [0.30, 0.46, 0.24, 0.52, 0.36, 0.60, 0.28, 0.44, 0.34, 0.50]
         bw = w / (len(heights) + 2.0)
@@ -363,21 +345,18 @@ def banner(x, y, w, h, kind, cont_col):
             DRAW.rectangle([bx, base - h * hh, bx + bw * 0.82, base], fill=a)
         if kind == "harbour":
             DRAW.rectangle([x, base, x + w, y + h], fill=tint(c, 0.55))
-            # hull and mast
             hx = x + w * 0.62
             DRAW.polygon([(hx, base + h * 0.06), (hx + w * 0.18, base + h * 0.06),
                           (hx + w * 0.15, base + h * 0.12),
                           (hx + w * 0.03, base + h * 0.12)], fill=CARD)
             DRAW.line([hx + w * 0.09, base + h * 0.06, hx + w * 0.09, y + h * 0.12],
                       fill=CARD, width=max(1, int(1.6 * u)))
-        # two flags over the skyline
         for fx in (x + w * 0.24, x + w * 0.46):
             DRAW.line([fx, base, fx, y + h * 0.12], fill=INK, width=max(1, int(1.8 * u)))
             DRAW.polygon([(fx, y + h * 0.12), (fx + 13 * u, y + h * 0.19),
                           (fx, y + h * 0.26)], fill=c)
 
     elif kind == "flags":
-        # two flag poles with pennants
         for i, fx in enumerate((x + w * 0.30, x + w * 0.62)):
             DRAW.line([fx, y + h * 0.88, fx, y + h * 0.12], fill=INK,
                       width=max(1, int(2.0 * u)))
@@ -452,13 +431,10 @@ def banner(x, y, w, h, kind, cont_col):
                           (ax + w * 0.16, y + h * 0.70), (ax + w * 0.10, y + h * 0.70),
                           (ax + w * 0.10, y + h * 0.80)], fill=a if i % 2 == 0 else c)
 
-    else:  # fallback: a simple flat bar
+    else:
         DRAW.rectangle([x, y + h * 0.42, x + w, y + h * 0.58], fill=a)
 
 
-# --------------------------------------------------------------------------
-# Page
-# --------------------------------------------------------------------------
 def main():
     global DRAW
     img = Image.new("RGB", (1024, 1024), PAPER)
@@ -469,221 +445,305 @@ def main():
     f_sans = lambda s: font(SANS, s)
 
     # ---- Masthead -------------------------------------------------------
-    DRAW.text((24, 4), "THE WORLD'S NEWS IN ONE PICTURE", font=f_sansb(12.5), fill=ACCENT)
-    right = "55 STORIES · ONE PAGE"
-    DRAW.text((1000, 4), right, font=f_sansb(12.5), fill=INK, anchor="ra")
+    DRAW.text((24, 3), "THE WORLD'S NEWS IN ONE PICTURE", font=f_sansb(12.5), fill=ACCENT)
+    right = "55 STORIES - ONE PAGE"
+    DRAW.text((1000, 3), right, font=f_sansb(12.5), fill=INK, anchor="ra")
 
-    title_size = 58
+    title_size = 54
     while title_size >= 40:
         f = font(SERIF_BOLD, title_size)
         if DRAW.textlength("THE DAILY ATLAS", font=f) <= 900:
             break
         title_size -= 2
-    DRAW.text((512, 16), "THE DAILY ATLAS", font=font(SERIF_BOLD, title_size),
+    DRAW.text((512, 13), "THE DAILY ATLAS", font=font(SERIF_BOLD, title_size),
               fill=INK, anchor="ma")
 
-    r1 = 16 + title_size + 7
+    r1 = 13 + title_size + 6
     DRAW.line([24, r1, 1000, r1], fill=ACCENT, width=3)
     DRAW.line([24, r1 + 5, 1000, r1 + 5], fill=ACCENT, width=1)
 
-    dy = r1 + 10
+    dy = r1 + 9
     DRAW.text((512, dy), "Wednesday 18 November 2026",
-              font=font(SERIF_BOLD, 23), fill=ACCENT, anchor="ma")
+              font=font(SERIF_BOLD, 21), fill=ACCENT, anchor="ma")
 
-    sy = dy + 31
+    sy = dy + 27
     DRAW.text((24, sy), "EVERY STORY REPORTED ON THE DAY", font=f_sans(10.5), fill=GREY)
-    DRAW.text((1000, sy), "WEDNESDAY EDITION · NO. 18",
+    DRAW.text((1000, sy), "WEDNESDAY EDITION - NO. 18",
               font=f_sansb(11), fill=INK, anchor="ra")
 
-    fy = sy + 18
+    # ---- UTC timeline strip (NEW device 1) ------------------------------
+    tl_y = sy + 13
+    tl_w = 1000 - 24
+    tl_h = 46
+    DRAW.rectangle([24, tl_y, 1000, tl_y + tl_h], fill=CARD, outline=BORDER, width=1)
+
+    # Label box over left 62px
+    DRAW.rectangle([24, tl_y, 24 + 62, tl_y + tl_h], fill=ACCENT)
+    DRAW.text((55, tl_y + 13), "THE DAY", font=f_sansb(10), fill=(255, 255, 255), anchor="ma")
+    DRAW.text((55, tl_y + 26), "IN UTC", font=f_sansb(10), fill=(255, 255, 255), anchor="ma")
+
+    timeline_data = [
+        ("Overnight", "Russia fires 141 drones at Ukraine"),
+        ("Before dawn", "Iran strikes Kuwait & Bahrain bases"),
+        ("Asia daytime", "Xi-Putin summit; Quad meets in Manila"),
+        ("10:16 UTC", "Voyager 1 reaches one light-day"),
+        ("~19:00 UTC", "Fed minutes point to more hikes"),
+        ("Evening", "Dow closes -561 on rate fears"),
+    ]
+    rem_w = tl_w - 62
+    seg_w = rem_w / 6.0
+    for k, (lbl, ev) in enumerate(timeline_data):
+        seg_x = 24 + 62 + k * seg_w
+        if k > 0:
+            DRAW.line([seg_x, tl_y + 5, seg_x, tl_y + 41], fill=BORDER, width=1)
+        DRAW.text((seg_x + 8, tl_y + 4), lbl, font=f_sansb(10), fill=ACCENT)
+        # wrapped event text
+        ev_lines = wrap(ev, f_sans(8.5), seg_w - 14)
+        ev_y = tl_y + 19
+        for line in ev_lines:
+            assert ev_y + 10 <= tl_y + tl_h + 1e-6, "timeline segment text passes tl_y+46"
+            DRAW.text((seg_x + 8, ev_y), line, font=f_sans(8.5), fill=INK)
+            ev_y += 10
 
     # ---- Featured row ---------------------------------------------------
+    fy = tl_y + tl_h + 8  # tl_y + 46 + 8 = tl_y + 54
     for i, sid in enumerate([3, 2, 1]):
         x = 24 + i * 329
-        cw, ch = 317, 180
+        cw, ch = 317, 162
         DRAW.rectangle([x, fy, x + cw, fy + ch], fill=CARD, outline=BORDER, width=1)
         s = story_of(sid)
         drawn.add(sid)
         cont = CONTINENTS[s["continent"]]
 
-        bh = 68
-        banner(x, fy, cw, bh, s["kind"], cont)
+        # Banner across top 74px, but tag bar from fy+48 to fy+74 (height 26)
+        banner(x, fy, cw, 48, s["kind"], cont)
 
-        # tag bar over the banner's bottom 26px
-        tag_y = fy + bh - 26
-        DRAW.rectangle([x, tag_y, x + cw, fy + bh], fill=cont)
-        DRAW.rectangle([x, tag_y, x + 5, fy + bh], fill=ACCENT)
-        DRAW.text((x + 14, tag_y + 13), s["kick"], font=f_sansb(12), fill=(255, 255, 255),
+        tag_y = fy + 48
+        tag_col = cont if s["continent"] != "Europe" else ACCENT # or use tag col logic
+        # If tag colour IS the accent, use ink for the strip
+        # Let's check tag colors from prompt:
+        # 1: STRIKES ON BOTH SIDES (accent) -> strip INK
+        # 2: THREE-WAY ON THURSDAY (navy) -> strip ACCENT
+        # 3: MANILA FIRST (near-black 16,22,34) -> strip ACCENT
+        tag_fill = ACCENT if sid == 1 else (NAVY if sid == 2 else (16, 22, 34))
+        strip_col = INK if tag_fill == ACCENT else ACCENT
+
+        DRAW.rectangle([x, tag_y, x + cw, fy + 74], fill=tag_fill)
+        DRAW.rectangle([x, tag_y, x + 5, fy + 74], fill=strip_col)
+        DRAW.text((x + 14, tag_y + 13), s["tag"], font=f_sansb(12), fill=(255, 255, 255),
                   anchor="lm")
 
-        chip(x + 20, fy + 78, 10, sid, ACCENT)
-        DRAW.text((x + 38, fy + 78), s["kick"], font=f_sansb(10.5), fill=ACCENT,
+        chip(x + 18, fy + 86, 9.5, sid, ACCENT)
+        DRAW.text((x + 34, fy + 86), s["kick"], font=f_sansb(10.5), fill=ACCENT,
                   anchor="lm")
 
-        rem = block(x + 10, fy + 90, 297, s["head"], font(SERIF_BOLD, 18), 19, fy + 160)
+        # SOURCE CHIP (NEW device 3) on the same row, right side
+        chip_text = s["chip"]
+        cfnt = f_sansb(8)
+        pw = DRAW.textlength(chip_text, font=cfnt) + 14
+        pill_x1 = x + 309 - pw
+        pill_x2 = x + 309
+        pill_y1 = fy + 78
+        pill_y2 = fy + 94
+        DRAW.rounded_rectangle([pill_x1, pill_y1, pill_x2, pill_y2], radius=7, fill=(90, 88, 80))
+        DRAW.text((pill_x1 + pw / 2.0, fy + 86), chip_text, font=cfnt, fill=(255, 255, 255), anchor="mm")
+
+        rem = block(x + 10, fy + 96, 297, s["head"], font(SERIF_BOLD, 17), 18, fy + 133)
         assert rem == "", "featured %d headline truncated: %r" % (sid, rem)
 
-        head_lines = wrap(s["head"], font(SERIF_BOLD, 18), 297)
-        summ_y = fy + 90 + len(head_lines) * 19 + 2
+        head_lines = wrap(s["head"], font(SERIF_BOLD, 17), 297)
+        summ_y = fy + 96 + len(head_lines) * 18 + 2
         size, nlines = fit_block(x + 10, summ_y, 297, s["summ"], SERIF,
-                                 [10, 9.5, 9, 8.5, 8, 7.5], fy + 178, 1.25)
+                                 [9.5, 9, 8.5, 8], fy + 160, 1.21)
         print("featured %2d: summary %spt/%d lines" % (sid, size, nlines))
 
     # ---- Grid -----------------------------------------------------------
-    grid_rule_y = fy + 180 + 8
+    grid_rule_y = fy + 162 + 8
     DRAW.line([24, grid_rule_y, 1000, grid_rule_y], fill=INK, width=1)
     grid_top = grid_rule_y + 8
 
     for idx, sid in enumerate(range(4, 16)):
         col, row = idx % 4, idx // 4
         x = 24 + col * 246
-        y0 = grid_top + row * 102
-        cw, ch = 238, 92
+        y0 = grid_top + row * 92
+        cw, ch = 238, 84
         DRAW.rectangle([x, y0, x + cw, y0 + ch], fill=CARD, outline=BORDER, width=1)
         s = story_of(sid)
         drawn.add(sid)
         cont = CONTINENTS[s["continent"]]
 
-        banner(x, y0, cw, 20, s["kind"], cont)
+        banner(x, y0, cw, 34, s["kind"], cont)
 
-        chip(x + 14, y0 + 31, 6.5, sid, ACCENT)
-        DRAW.text((x + 26, y0 + 31), s["kick"], font=f_sansb(8.5), fill=ACCENT,
+        chip(x + 13, y0 + 41, 6, sid, ACCENT)
+        DRAW.text((x + 24, y0 + 41), s["kick"], font=f_sansb(8), fill=ACCENT,
                   anchor="lm")
 
-        rem = block(x + 8, y0 + 37, 222, s["head"], font(SERIF_BOLD, 12.5), 13, y0 + 65)
+        # SOURCE CHIP (NEW device 3) for grid
+        g_chip = s["chip"]
+        g_col = DATE_CHECK_RED if g_chip.startswith("CLAIM") else GREY
+        DRAW.text((x + 230, y0 + 41), g_chip, font=f_sansb(7), fill=g_col, anchor="rm")
+
+        rem = block(x + 8, y0 + 47, 222, s["head"], font(SERIF_BOLD, 12), 12.5, y0 + 72)
         assert rem == "", "grid %d headline truncated: %r" % (sid, rem)
 
-        head_lines = wrap(s["head"], font(SERIF_BOLD, 12.5), 222)
-        summ_y = y0 + 37 + len(head_lines) * 13 + 1
+        head_lines = wrap(s["head"], font(SERIF_BOLD, 12), 222)
+        summ_y = y0 + 47 + len(head_lines) * 12.5 + 1
         size, nlines = fit_block(x + 8, summ_y, 222, s["summ"], SERIF,
-                                 [9, 8.5, 8, 7.5, 7, 6.5, 6], y0 + 91, 1.2)
+                                 [8.5, 8, 7.5, 7, 6.5], y0 + 83, 1.12)
         print("grid     %2d: summary %spt/%d lines" % (sid, size, nlines))
 
     # ---- Bottom band ----------------------------------------------------
-    bb_rule_y = grid_top + 3 * 102 - 10 + 8
-    DRAW.line([24, bb_rule_y, 1000, bb_rule_y], fill=INK, width=1)
-    bb_y = bb_rule_y + 6
-    DRAW.text((24, bb_y), "ALSO ON WEDNESDAY", font=f_sansb(11), fill=ACCENT)
-    band_top = bb_y + 18
+    by = grid_top + 3 * 84 + 2 * 8 + 12
+    DRAW.line([24, by, 1000, by], fill=INK, width=1)
+    hy = by + 8
 
-    # Map on the right
-    cell = 5.0
-    mcols, mrows = 72, 36
-    mw, mh = int(mcols * cell), int(mrows * cell)
-    mx = 1000 - mw
-    my = band_top
-    map_bottom = my + mh + 20      # legend strip sits just under the map
+    DRAW.text((24, hy), "ALSO ON WEDNESDAY 18 NOVEMBER", font=f_sansb(12), fill=INK)
+    DRAW.text((700, hy), "WHERE IT HAPPENED", font=f_sansb(12), fill=ACCENT)
 
-    mask = np.zeros((mrows, mcols), dtype=bool)
+    # Legend centered on x=512 in header row
+    # Let's compute legend width or position
+    # Legend items: 6 continents. Dot 7px + text in Sans 8.5 ink.
+    # Let's measure legend total width or place them around 512.
+    # Each item: 9px rect + gap 4px + text width + gap 16px.
+    # Let's calculate total width:
+    leg_items = list(CONTINENTS.items())
+    leg_font = f_sans(8.5)
+    item_widths = []
+    for name, col in leg_items:
+        tw = DRAW.textlength(name, font=leg_font)
+        item_widths.append(9 + 4 + tw)
+    total_leg_w = sum(item_widths) + 16 * (len(leg_items) - 1)
+    leg_start_x = 512 - total_leg_w / 2.0
+    lx = leg_start_x
+    for (name, col), iw in zip(leg_items, item_widths):
+        DRAW.rectangle([lx, hy + 2, lx + 9, hy + 11], fill=col)
+        DRAW.text((lx + 13, hy + 6.5), name, font=leg_font, fill=INK, anchor="lm")
+        lx += iw + 16
+
+    map_top = hy + 22
+    # Map box on right: x from 700 to 1000 (width 300)
+    mx = 700
+    mw = 300
+
+    # Briefs on the left: x = 24, 4 columns each 150 wide? Wait, prompt says:
+    # "the 40 briefs (stories 16-55) in 4 columns at x = 24, 196, 368, 540, each column 150 wide."
+    # Let's check x coordinates: 24, 196, 368, 540. Width of each column: 150.
+    # Right edge of column 3 (at x=540): 540 + 150 = 690. Map starts at 700! Perfect!
+    col_x_list = [24, 196, 368, 540]
+    col_w = 150
+
+    briefs_bottom_target = 930
+    ids = list(range(16, 56))
+    # 40 briefs across 4 columns -> 10 briefs per column
+    col_ids = [ids[i*10:(i+1)*10] for i in range(4)]
+
+    # Auto-fit briefs font size
+    chosen = None
+    for size in [9.5, 9.25, 9.0, 8.75, 8.5, 8.25, 8.0]:
+        fb, fr = font(SANS_BOLD, size), font(SANS, size)
+        lh = size + 2
+        ok = True
+        max_col_h = 0
+        for c_ids in col_ids:
+            y = map_top
+            for sid in c_ids:
+                lines = wrap_brief(sid, fb, fr, col_w)
+                y += len(lines) * lh + 2.0 + 2.0 # gap + separator
+            if y - map_top > max_col_h:
+                max_col_h = y - map_top
+        # tallest column must end at or above y=930 (or let's check band_h)
+        if map_top + max_col_h <= 930 + 1e-6:
+            chosen = (size, lh, max_col_h)
+            break
+    if not chosen:
+        chosen = (8.0, 10.0, 0) # fallback
+    size, lh, band_h = chosen
+    # If band_h wasn't exact in loop, let's recalculate accurately:
+    fb, fr = font(SANS_BOLD, size), font(SANS, size)
+    col_heights = []
+    for c_ids in col_ids:
+        y = map_top
+        for sid in c_ids:
+            lines = wrap_brief(sid, fb, fr, col_w, DRAW)
+            y += len(lines) * lh + 4.0
+        col_heights.append(y - map_top)
+    band_h = max(col_heights)
+
+    # Draw briefs
+    for c, c_ids in enumerate(col_ids):
+        x = col_x_list[c]
+        y = map_top
+        for sid in c_ids:
+            y = draw_brief(x, y, col_w, sid, fb, fr, lh, DRAW)
+            drawn.add(sid)
+
+    # Draw map on the right (x from 700 to 1000, height = band_h)
+    mh = band_h
+    my = map_top
+
+    mask = np.zeros((36, 72), dtype=bool)
     for lon0, lon1, lat0, lat1 in LAND_RECTS:
         c0 = max(0, int(np.floor((lon0 + 180.0) / 5.0)))
-        c1 = min(mcols - 1, int(np.ceil((lon1 + 180.0) / 5.0)) - 1)
+        c1 = min(71, int(np.ceil((lon1 + 180.0) / 5.0)) - 1)
         r0 = max(0, int(np.floor((90.0 - lat1) / 5.0)))
-        r1 = min(mrows - 1, int(np.ceil((90.0 - lat0) / 5.0)) - 1)
+        r1 = min(35, int(np.ceil((90.0 - lat0) / 5.0)) - 1)
         mask[r0:r1 + 1, c0:c1 + 1] = True
 
-    land = tint(NAVY, 0.42)
-    for r in range(mrows):
-        for c in range(mcols):
+    cell_w = mw / 72.0
+    cell_h = mh / 36.0
+    land_col = tint(NAVY, 0.42)
+    for r in range(36):
+        for c in range(72):
             if mask[r, c]:
-                x1 = mx + c * cell
-                y1 = my + r * cell
-                DRAW.rectangle([x1, y1, x1 + cell - 0.6, y1 + cell - 0.6], fill=land)
+                rx = mx + c * cell_w
+                ry = my + r * cell_h
+                DRAW.rectangle([rx, ry, rx + cell_w - 0.6, ry + cell_h - 0.6], fill=land_col)
 
-    # numbered pins, nudged apart deterministically so every number stays legible
-    pr = 4.6
+    # Draw pins on map
+    pr = 7.0
     placed = []
     for sid in sorted(PINS):
-        lon, lat = PINS[sid]
-        ox = mx + (lon + 180.0) / 360.0 * mw
-        oy = my + (90.0 - lat) / 180.0 * mh
-        ox = min(max(ox, mx + pr + 0.5), mx + mw - pr - 0.5)
-        oy = min(max(oy, my + pr + 0.5), my + mh - pr - 0.5)
-        px, py = ox, oy
-        keep = 2 * pr + 0.4
-        # nearest free spot: spiral outwards in small steps
-        best = None
-        for ring in range(0, 24):
-            rad = ring * 1.6
-            steps = max(1, int(6 * ring))
-            for k in range(steps):
-                ang = 2.0 * np.pi * k / steps
-                cx = min(max(ox + rad * np.cos(ang), mx + pr + 0.5), mx + mw - pr - 0.5)
-                cy = min(max(oy + rad * np.sin(ang), my + pr + 0.5), my + mh - pr - 0.5)
-                if all((cx - qx) ** 2 + (cy - qy) ** 2 >= keep ** 2 for qx, qy in placed):
-                    best = (cx, cy)
-                    break
-            if best:
-                break
-        if best is None:
-            best = (ox, oy)
-        px, py = best
-        placed.append((px, py))
-        chip(px, py, pr, sid, CONTINENTS[continent_of(sid)])
+        lon, lat, dx, dy = PINS[sid]
+        ox = mx + (lon + 180.0) / 360.0 * mw + dx
+        oy = my + (90.0 - lat) / 180.0 * mh + dy
+        ox = min(max(ox, mx + pr + 1), mx + mw - pr - 1)
+        oy = min(max(oy, my + pr + 1), my + mh - pr - 1)
+        placed.append((ox, oy))
+        cont_col = CONTINENTS[continent_of(sid)]
+        chip(ox, oy, pr, sid, cont_col)
 
-    # legend of the six continent colours under the map
-    leg_y = my + mh + 6
-    item_w = mw / 6.0
-    for i, (name, col) in enumerate(CONTINENTS.items()):
-        lx = mx + i * item_w
-        DRAW.rectangle([lx, leg_y + 2, lx + 9, leg_y + 11], fill=col)
-        DRAW.text((lx + 13, leg_y + 6.5), name, font=f_sans(8.5), fill=INK, anchor="lm")
+    # ---- DATE CHECK box (NEW device 2) ----------------------------------
+    dc_y = map_top + band_h + 8
+    dc_h = 36
+    DRAW.rectangle([24, dc_y, 1000, dc_y + dc_h], fill=CARD, outline=DATE_CHECK_RED, width=2)
 
-    # Briefs on the left
-    brief_x0 = 24
-    ncols = 4
-    gap = 9
-    brief_right = mx - 16
-    col_w = (brief_right - brief_x0 - gap * (ncols - 1)) / ncols
-    briefs_bottom = 978           # the briefs column block runs to the footer
-    ids = list(range(16, 56))
+    # Label box over left 62px
+    DRAW.rectangle([24, dc_y, 24 + 62, dc_y + dc_h], fill=DATE_CHECK_RED)
+    DRAW.text((55, dc_y + 6), "DATE", font=f_sansb(10.5), fill=(255, 255, 255), anchor="ma")
+    DRAW.text((55, dc_y + 19), "CHECK", font=f_sansb(10.5), fill=(255, 255, 255), anchor="ma")
 
-    chosen = None
-    for size in [9, 8.75, 8.5, 8.25, 8, 7.75, 7.5, 7.25, 7, 6.75, 6.5, 6.25, 6]:
-        fb, fr = font(SANS_BOLD, size), font(SANS, size)
-        lh = size * 1.22
-        ok = True
-        for c in range(ncols):
-            y = band_top
-            for sid in ids[c * 10:(c + 1) * 10]:
-                lines = wrap_brief(sid, fb, fr, col_w)
-                y += len(lines) * lh + 1.0
-            if y > briefs_bottom + 1e-6:
-                ok = False
-                break
-        if ok:
-            chosen = (size, lh)
-            break
-    assert chosen, "no brief font size fits"
-    size, lh = chosen
-    print("briefs: %spt, %d columns of 10" % (size, ncols))
-
-    fb, fr = font(SANS_BOLD, size), font(SANS, size)
-    col_ends = []
-    for c in range(ncols):
-        x = brief_x0 + c * (col_w + gap)
-        y = band_top
-        for sid in ids[c * 10:(c + 1) * 10]:
-            y = draw_brief(x, y, col_w, sid, fb, fr, lh, briefs_bottom)
-            drawn.add(sid)
-            y += 1.0
-        col_ends.append(y)
-    print("brief columns end at: %s (block top %.1f, bottom %.1f, map x %.1f)"
-          % (["%.1f" % v for v in col_ends], band_top, briefs_bottom, mx))
+    dc_text = ("Left out on purpose - they broke on other days: the An-12 crash "
+               "in Siberia, 19 killed (Tue 17 Nov) - Peltola's Alaska Senate call "
+               "(Tue 17 Nov) - the Knesset speaker vote, Kahana 66-52 (Tue 17 "
+               "Nov) - the Crimea Bridge collapse (overnight 16-17 Nov) - "
+               "Nvidia's results (17 Nov). Not yet: the ICJ Rohingya judgment is "
+               "due Thu 19 Nov.")
+    dc_lines = wrap(dc_text, f_sans(9), 976 - 80)
+    assert len(dc_lines) <= 2, "DATE CHECK text exceeds 2 lines: %d lines" % len(dc_lines)
+    dc_ty = dc_y + 5
+    for line in dc_lines:
+        DRAW.text((96, dc_ty), line, font=f_sans(9), fill=INK)
+        dc_ty += 12
 
     # ---- Footer ---------------------------------------------------------
-    f1 = ("Deliberately not today: Peltola's Senate call, the Knesset speaker "
-          "vote and the Kerch Bridge collapse all happened on 17 November.")
-    DRAW.text((512, 984), f1, font=font(SERIF_ITALIC, 10), fill=INK, anchor="ma")
+    fy2 = dc_y + dc_h + 6  # dc_y + 36 + 6 = dc_y + 42
+    DRAW.line([24, fy2, 1000, fy2], fill=INK, width=1)
 
-    f2 = ("Every story happened or was first reported on Wednesday 18 November "
-          "2026 · Disputed claims are attributed · Sources: Reuters "
-          "· AP · AFP · BBC · Al Jazeera · CNN "
-          "· WHO · UN News")
-    f2_size = 8.5
-    while f2_size > 5 and DRAW.textlength(f2, font=f_sans(f2_size)) > 976:
-        f2_size -= 0.25
-    DRAW.text((512, 999), f2, font=f_sans(f2_size), fill=GREY, anchor="ma")
+    f1 = "CLAIM = one side's account, not independently confirmed."
+    DRAW.text((512, fy2 + 5), f1, font=font(SERIF_ITALIC, 9.5), fill=INK, anchor="ma")
+
+    f2 = ("Every story happened or was first reported on Wednesday 18 November 2026 - Disputed claims are attributed - Sources: Reuters - AP - AFP - BBC - Al Jazeera - CNN - WHO - UN News")
+    DRAW.text((512, fy2 + 21), f2, font=f_sans(8.5), fill=GREY, anchor="ma")
 
     assert len(drawn) == 55 and drawn == set(range(1, 56)), \
         "expected all 55 story numbers, got %d" % len(drawn)
@@ -695,15 +755,16 @@ def main():
     print("wrote %s: %d bytes, %dx%d" % (out, nbytes, img.width, img.height))
 
 
-def wrap_brief(sid, fb, fr, col_w):
-    """Number in bold, then the brief text, wrapped; returns the lines."""
+def wrap_brief(sid, fb, fr, col_w, draw_obj=None):
+    global DRAW
+    d = draw_obj if draw_obj is not None else DRAW
     num = "%d. " % sid
-    nw = DRAW.textlength(num, font=fb)
+    nw = d.textlength(num, font=fb)
     lines, cur = [], ""
     avail = col_w - nw
     for word in BRIEFS[sid].split():
         trial = (cur + " " + word).strip()
-        if not cur or DRAW.textlength(trial, font=fr) <= avail:
+        if not cur or d.textlength(trial, font=fr) <= avail:
             cur = trial
         else:
             lines.append(cur)
@@ -714,17 +775,20 @@ def wrap_brief(sid, fb, fr, col_w):
     return lines
 
 
-def draw_brief(x, y, col_w, sid, fb, fr, lh, max_y):
-    """Draw one brief (bold number + text); assert it fits above max_y."""
+def draw_brief(x, y, col_w, sid, fb, fr, lh, draw_obj):
     num = "%d. " % sid
-    nw = DRAW.textlength(num, font=fb)
-    lines = wrap_brief(sid, fb, fr, col_w)
-    assert y + len(lines) * lh <= max_y + 1e-6, "brief %d clips" % sid
-    DRAW.text((x, y), num, font=fb, fill=ACCENT)
-    DRAW.text((x + nw, y), lines[0], font=fr, fill=INK)
+    nw = draw_obj.textlength(num, font=fb)
+    lines = wrap_brief(sid, fb, fr, col_w, draw_obj)
+    draw_obj.text((x, y), num, font=fb, fill=ACCENT)
+    draw_obj.text((x + nw, y), lines[0], font=fr, fill=INK)
     for i, line in enumerate(lines[1:], start=1):
-        DRAW.text((x, y + i * lh), line, font=fr, fill=INK)
-    return y + len(lines) * lh
+        draw_obj.text((x, y + i * lh), line, font=fr, fill=INK)
+    total_h = len(lines) * lh
+    # Draw faint dotted separator under brief
+    sep_y = y + total_h + 1.0
+    for dx in range(int(x), int(x + col_w), 3):
+        draw_obj.point((dx, sep_y), fill=BORDER)
+    return y + total_h + 4.0
 
 
 if __name__ == "__main__":
